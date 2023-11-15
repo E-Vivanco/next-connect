@@ -1,29 +1,36 @@
-//import { helloWorld ,configureDatabase} from "../lib/db"
+//'use client'
+import {helloWorld}  from "../lib/db"
+import getDomain from "../lib/getDomain"
 //import configureDatabase from '../lib/db'
 
 async function getData(){
- {/* const endpoint ="http://localhost:3001/api/libros"
+ const domain = getDomain() 
+ const endpoint =`${domain}/api/libros`
   const res = await fetch(endpoint)
 
   if (!res.ok){
     throw new Error("Fetch falla")
   }
-return res.json()*/}
-return {"res":[]}
+return res.json()
+//return {items:[]}
 }
 
 export default async function Libropage() {
-    //const dbhello = helloWorld()
+    const dbhello = helloWorld()
     //const dbhello2 =configureDatabase()
-    //console.log(dbhello)
+    console.log(dbhello)
    // console.log(dbhello2)
-    const data = await getData()
+    const data =await getData()
+    console.log(data)
     const items = data && data.items ? [...data.items] : []
     console.log(items)
+    console.log(process.env.NEXT_PUBLIC_VERCEL_URL)
   return (
-    <div>Libro-Page
-        {/*JSON.stringify(dbhello)}
-        {JSON.stringify(dbhello2)*/}
-    </div>
+    <main><h1>Page-Libro</h1>
+    {JSON.stringify(dbhello)}
+        {items && items.map((item,idx)=>{
+          return <li key={`index-${idx}`}>{item.title}</li>
+        })}
+    </main>
   )
 }
