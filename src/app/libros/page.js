@@ -2,13 +2,14 @@
 //import configureDatabase from '../lib/db'
 
 async function getData(){
-  const endpoint ="http://localhost:3001/api/libros"
+ {/* const endpoint ="http://localhost:3001/api/libros"
   const res = await fetch(endpoint)
 
   if (!res.ok){
     throw new Error("Fetch falla")
   }
-  return res.json()
+return res.json()*/}
+return {"res":[]}
 }
 
 export default async function Libropage() {
