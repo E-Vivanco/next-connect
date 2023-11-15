@@ -6,7 +6,7 @@ export default function LibroIDpage({params}) {
     <main>
        <h1>
         Hello 
-        Lectura de parametro
+        Lectura de parametro nivel 2 libro
        </h1>
     </main>
   )
