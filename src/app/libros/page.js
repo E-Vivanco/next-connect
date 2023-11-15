@@ -1,4 +1,4 @@
-import { helloWorld ,configureDatabase} from "../lib/db"
+//import { helloWorld ,configureDatabase} from "../lib/db"
 //import configureDatabase from '../lib/db'
 
 async function getData(){
@@ -12,17 +12,17 @@ async function getData(){
 }
 
 export default async function Libropage() {
-    const dbhello = helloWorld()
-    const dbhello2 =configureDatabase()
-    console.log(dbhello)
-    console.log(dbhello2)
+    //const dbhello = helloWorld()
+    //const dbhello2 =configureDatabase()
+    //console.log(dbhello)
+   // console.log(dbhello2)
     const data = await getData()
     const items = data && data.items ? [...data.items] : []
     console.log(items)
   return (
     <div>Libro-Page
-        {JSON.stringify(dbhello)}
-        {JSON.stringify(dbhello2)}
+        {/*JSON.stringify(dbhello)}
+        {JSON.stringify(dbhello2)*/}
     </div>
   )
 }
