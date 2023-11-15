@@ -20,7 +20,7 @@ return res.json()
 }
 
 export default async function Libropage() {
-    const dbhello = helloWorld()
+    const dbhello = await helloWorld()
     //const dbhello2 =configureDatabase()
     console.log(dbhello)
    // console.log(dbhello2)
