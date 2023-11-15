@@ -6,8 +6,9 @@ import getDomain from "../lib/getDomain"
 async function getData(){
  const domain = getDomain() 
  const endpoint =`${domain}/api/libros`
- const res = await fetch(endpoint,{next:{revalidate: 20}})
-
+ //const res = await fetch(endpoint,{next:{revalidate: 20}})
+//http get 
+ const res = await fetch(endpoint, {cache: 'no-store'})
   if (!res.ok){
     throw new Error("Fetch falla")
   }
