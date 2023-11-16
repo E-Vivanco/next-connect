@@ -11,6 +11,9 @@ export async function helloWorld(){
     return  {dbNow:"hello",dbNow: Math.abs(end - start )} //dbResponse
 }
 
+export const runtime = 'edge' //nodejs
+export const preferredRegion = 'iad1'
+
 /*export async function configureDatabase(){
     const dbResponse =  sql`
         CREATE TABLE IF NOT EXISTS "libro"(
