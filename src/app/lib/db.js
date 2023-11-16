@@ -11,10 +11,7 @@ export async function helloWorld(){
     return  {dbNow:"hello",dbNow: Math.abs(end - start )} //dbResponse
 }
 
-export const runtime = 'edge' //nodejs
-export const preferredRegion = 'iad1'
-
-/*export async function configureDatabase(){
+export async function configureDatabase(){
     const dbResponse =  sql`
         CREATE TABLE IF NOT EXISTS "libro"(
             "id" SERIAL NOT NULL,
@@ -44,4 +41,8 @@ export const preferredRegion = 'iad1'
     console.log("Db response for new table-1",dbResponse,dbResponse2)
    // console.log("Db response for new table-2",dbResponse2)
 }
-configureDatabase().catch(err=>console.log("db config err",err))*/
+configureDatabase().catch(err=>console.log("db config err",err))
+
+export const runtime = 'edge' //nodejs
+export const preferredRegion = 'iad1'
+
